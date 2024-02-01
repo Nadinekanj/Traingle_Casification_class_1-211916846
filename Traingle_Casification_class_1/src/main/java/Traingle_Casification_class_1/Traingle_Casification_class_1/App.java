@@ -44,16 +44,21 @@ class TriangleClassifier {
 	    }
 
 	    private static boolean isIsosceles(int a, int b, int c) {
-	        return a + b > c || a + c > b && b + c > a && (a == b || b == c || c==a );;
+	        return a + b > c || a + c > b && b + c > a && (a == b || b == c || c==a );
 	    }    
 	    	
 
 
 	    private static boolean isEquilateral(int a, int b, int c ) {
-	    	return a + b > c && a + c > b && b + c > a && (a == a) || (b == c) || (c == a);
+	    	return a + b > c && a + c > b && b + c > a && (a == b) & (b == c) & (c == a);
 	    }
 	   
-	    
+
+	    private static boolean isScalene(int a, int b, int c ) {
+	    	return a + b > c && a + c > b && b + c > a && (a!=b) && (a!=c) && (c!=b);
+	    }
+	   
+
 	    public static Triangle_Types get_type() {
 	    	return triangle;
 	    }
