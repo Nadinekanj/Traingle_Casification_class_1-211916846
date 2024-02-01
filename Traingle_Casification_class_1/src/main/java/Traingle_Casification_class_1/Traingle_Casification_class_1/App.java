@@ -16,7 +16,7 @@ enum Triangle_Types {
 	} 
 
 class TriangleClassifier {
-	//hello
+	
 	private static Triangle_Types triangle;
 	
 	public static void classifyTriangle(int a, int b, int c) {
@@ -25,12 +25,15 @@ class TriangleClassifier {
 	        if (isEquilateral(a, b, c)) {
 	        	triangle= Triangle_Types.Scalene;
 	        }else if(isIsosceles(a, b, c)) {
-	        	triangle= Triangle_Types.Nottriangle;
-	        }else if(isTriangle(a, b, c)){
 	        	triangle= Triangle_Types.isosceles;
+	        }else if(isScalene(a, b, c)){
+	        	triangle= Triangle_Types.Scalene;
+	        }else if(Nottriangle(a, b, c)) {
+	        	triangle=Triangle_Types.Nottriangle;
+
 	        }else {
 	        	
-	        	triangle=Triangle_Types.Scalene;
+	        	triangle=Triangle_Types.ERROR;
 	        }
 
 	       
